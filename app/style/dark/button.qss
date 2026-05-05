@@ -1,0 +1,253 @@
+/* =========================================================
+    DARK THEME — QPushButton (colors & state visuals)
+   ---------------------------------------------------------
+    Load after: app/style/core/button.qss
+
+    Palette tuned for dark chrome (#0d1117–#161b22 surfaces).
+    Primary (:default) matches light theme semantics (blue accent), tuned
+    for dark backgrounds. Green is not used here to avoid light/dark drift.
+   ========================================================= */
+
+
+/* —— Base (secondary / neutral) —— */
+QPushButton {
+    color: #f0f6fc;
+    background-color: #21262d;
+    border-color: #30363d;
+}
+
+
+QPushButton:hover {
+    color: #f0f6fc;
+    background-color: #30363d;
+    border-color: #6e7681;
+}
+
+
+QPushButton:pressed {
+    color: #f0f6fc;
+    background-color: #161b22;
+    border-color: #8b949e;
+}
+
+
+/* —— Primary emphasis (dialog default / main action) —— */
+QPushButton:default {
+    color: #ffffff;
+    background-color: #1f6feb;
+    border-color: #388bfd;
+}
+
+
+QPushButton:default:hover {
+    color: #ffffff;
+    background-color: #388bfd;
+    border-color: #58a6ff;
+}
+
+
+QPushButton:default:pressed {
+    color: #ffffff;
+    background-color: #1158c7;
+    border-color: #1f6feb;
+}
+
+
+/* —— AppButton appearance=primary (mirrors :default) —— */
+QPushButton[appearance="primary"] {
+    color: #ffffff;
+    background-color: #1f6feb;
+    border-color: #388bfd;
+}
+
+
+QPushButton[appearance="primary"]:hover {
+    color: #ffffff;
+    background-color: #388bfd;
+    border-color: #58a6ff;
+}
+
+
+QPushButton[appearance="primary"]:pressed {
+    color: #ffffff;
+    background-color: #1158c7;
+    border-color: #1f6feb;
+}
+
+
+/* —— Toggle / persistent selected —— */
+QPushButton:checked {
+    color: #79c0ff;
+    background-color: rgba(56, 139, 253, 0.18);
+    border-color: #388bfd;
+}
+
+
+QPushButton:checked:hover {
+    color: #a5d6ff;
+    background-color: rgba(56, 139, 253, 0.26);
+    border-color: #58a6ff;
+}
+
+
+QPushButton:checked:pressed {
+    color: #79c0ff;
+    background-color: rgba(56, 139, 253, 0.12);
+    border-color: #1f6feb;
+}
+
+
+/* Checkable default: deepen primary when “on” */
+QPushButton:default:checked {
+    color: #ffffff;
+    background-color: #1158c7;
+    border-color: #58a6ff;
+}
+
+
+QPushButton:default:checked:hover {
+    color: #ffffff;
+    background-color: #1f6feb;
+    border-color: #79c0ff;
+}
+
+
+QPushButton:default:checked:pressed {
+    color: #ffffff;
+    background-color: #0d419d;
+    border-color: #388bfd;
+}
+
+
+/* —— Disabled —— */
+QPushButton:disabled {
+    color: #6e7681;
+    background-color: #21262d;
+    border-color: #30363d;
+}
+
+
+QPushButton:default:disabled {
+    color: rgba(255, 255, 255, 0.72);
+    background-color: #143d79;
+    border-color: #143d79;
+}
+
+
+QPushButton[appearance="primary"]:disabled {
+    color: rgba(255, 255, 255, 0.72);
+    background-color: #143d79;
+    border-color: #143d79;
+}
+
+
+QPushButton:checked:disabled {
+    color: #6e7681;
+    background-color: #21262d;
+    border-color: #30363d;
+}
+
+
+QPushButton:default:checked:disabled {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #143d79;
+    border-color: #143d79;
+}
+
+
+/* —— Keyboard focus —— */
+QPushButton:focus {
+    border-color: #58a6ff;
+}
+
+
+QPushButton:default:focus {
+    border-color: #a5d6ff;
+}
+
+
+QPushButton[appearance="primary"]:focus {
+    border-color: #a5d6ff;
+}
+
+
+QPushButton:checked:focus {
+    border-color: #a5d6ff;
+}
+
+
+QPushButton:disabled:focus {
+    border-color: #484f58;
+}
+
+
+QPushButton:default:checked:focus {
+    border-color: #a5d6ff;
+}
+
+
+/* Flat */
+QPushButton:flat {
+    color: #f0f6fc;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+
+QPushButton:flat:hover {
+    color: #f0f6fc;
+    background-color: rgba(240, 246, 252, 0.08);
+    border-color: transparent;
+}
+
+
+QPushButton:flat:pressed {
+    color: #f0f6fc;
+    background-color: rgba(240, 246, 252, 0.12);
+    border-color: transparent;
+}
+
+
+QPushButton:flat:disabled {
+    color: #6e7681;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+
+QPushButton:flat:focus {
+    border-color: rgba(88, 166, 255, 0.55);
+}
+
+
+QPushButton:flat:checked {
+    color: #79c0ff;
+    background-color: rgba(56, 139, 253, 0.18);
+    border-color: rgba(56, 139, 253, 0.45);
+}
+
+
+QPushButton:flat:checked:hover {
+    color: #a5d6ff;
+    background-color: rgba(56, 139, 253, 0.26);
+    border-color: rgba(88, 166, 255, 0.55);
+}
+
+
+QPushButton:flat:checked:pressed {
+    color: #79c0ff;
+    background-color: rgba(56, 139, 253, 0.12);
+    border-color: rgba(56, 139, 253, 0.35);
+}
+
+
+QPushButton:flat:checked:disabled {
+    color: #6e7681;
+    background-color: rgba(240, 246, 252, 0.04);
+    border-color: transparent;
+}
+
+
+QPushButton:flat:checked:focus {
+    border-color: rgba(165, 214, 255, 0.65);
+}

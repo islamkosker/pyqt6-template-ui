@@ -1,0 +1,27 @@
+/* Sidebar-specific structural rules (core only). */
+
+QPushButton[context="sidebar"] {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 12px;
+    border-radius: 8px;
+
+    min-height: 44px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+QPushButton[context="sidebar"][compact="true"] {
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+QPushButton[context="sidebar"][active="true"] {
+    font-weight: 600;
+}
+
+QPushButton[context="sidebar"][is_header="true"] {
+    font-weight: 800;
+    font-size: 15px;
+}

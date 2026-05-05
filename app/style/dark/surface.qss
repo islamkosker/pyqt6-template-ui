@@ -1,0 +1,91 @@
+/* =========================================================
+    DARK THEME — SURFACE COLORS
+   ========================================================= */
+
+QMainWindow {
+    background-color: #0d1117;
+}
+
+QFrame#Sidebar {
+    background-color: #161b22;
+    border-right-color: #30363d;
+}
+
+QFrame#SidebarHeader,
+QFrame#SidebarFooter {
+    background-color: transparent;
+}
+
+QScrollArea#SidebarNavScroll,
+QFrame#SidebarNavContainer {
+    background-color: transparent;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+}
+
+QScrollBar::handle:vertical {
+    background: rgba(240, 246, 252, 0.25);
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: transparent;
+}
+
+QWidget#ViewSurface {
+    background-color: #0d1117;
+    color: #e6edf3;
+}
+
+QWidget#ViewMainContent {
+    background-color: #161b22;
+    border-left-color: #30363d;
+    border-right-color: #30363d;
+    border-bottom-color: #30363d;
+    color: #e6edf3;
+}
+
+QFrame#TopBar {
+    background-color: #161b22;
+    border-color: #30363d;
+}
+
+QWidget#TopBarDividerWrap {
+    background-color: transparent;
+}
+
+QFrame#TopBarDivider {
+    background-color: transparent;
+}
+
+QLabel#TopBarTitle {
+    color: #f0f6fc;
+}
+
+QLabel#TopBarStatus {
+    color: #8b949e;
+}
+
+QLabel#TopBarStatus[variant="success"] {
+    color: #3fb950;
+}
+
+QLabel#TopBarStatus[variant="error"] {
+    color: #f85149;
+}
+
+QFrame#Footer {
+    background-color: #161b22;
+    border-top-color: #30363d;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+QLabel#FooterLabel,
+QLabel#SidebarVersion {
+    color: #8b949e;
+}

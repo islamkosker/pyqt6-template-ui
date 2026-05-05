@@ -1,0 +1,63 @@
+/* =========================================================
+    CORE SURFACE STYLES
+   ---------------------------------------------------------
+   Structural rules only. Theme files provide colors.
+   ========================================================= */
+
+QMainWindow {
+    border: none;
+}
+
+QWidget#ViewSurface,
+QWidget#ViewMainContent,
+QFrame#Sidebar,
+QFrame#TopBar,
+QFrame#Footer,
+QFrame#SidebarHeader,
+QFrame#SidebarFooter,
+QScrollArea#SidebarNavScroll,
+QFrame#SidebarNavContainer,
+QWidget#TopBarDividerWrap,
+QWidget#TopBarDivider {
+    border: none;
+}
+
+QScrollBar:vertical {
+    width: 8px;
+    margin: 4px;
+}
+
+QScrollBar::handle:vertical {
+    border-radius: 4px;
+    min-height: 24px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    height: 0px;
+}
+
+QWidget#ViewMainContent {
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-top-width: 0px;
+    border-style: solid;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+QFrame#TopBar {
+    border-width: 0px;
+    border-style: solid;
+    border-bottom-width: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+QLabel#TopBarTitle {
+    font-size: 18px;
+    font-weight: 600;
+}

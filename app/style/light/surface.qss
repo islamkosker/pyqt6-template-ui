@@ -1,0 +1,91 @@
+/* =========================================================
+    LIGHT THEME — SURFACE COLORS
+   ========================================================= */
+
+QMainWindow {
+    background-color: #f6f8fa;
+}
+
+QFrame#Sidebar {
+    background-color: #f3f1f1;
+    border-right-color: #d1d9e0;
+}
+
+QFrame#SidebarHeader,
+QFrame#SidebarFooter {
+    background-color: transparent;
+}
+
+QScrollArea#SidebarNavScroll,
+QFrame#SidebarNavContainer {
+    background-color: transparent;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+}
+
+QScrollBar::handle:vertical {
+    background: rgba(31, 35, 40, 0.20);
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: transparent;
+}
+
+QWidget#ViewSurface {
+    background-color: #f6f8fa;
+    color: #1f2328;
+}
+
+QWidget#ViewMainContent {
+    background-color: #ffffff;
+    border-left-color: #d1d9e0;
+    border-right-color: #d1d9e0;
+    border-bottom-color: #d1d9e0;
+    color: #1f2328;
+}
+
+QFrame#TopBar {
+    background-color: #ffffff;
+    border-color: #d1d9e0;
+}
+
+QWidget#TopBarDividerWrap {
+    background-color: transparent;
+}
+
+QFrame#TopBarDivider {
+    background-color: transparent;
+}
+
+QLabel#TopBarTitle {
+    color: #1f2328;
+}
+
+QLabel#TopBarStatus {
+    color: #57606a;
+}
+
+QLabel#TopBarStatus[variant="success"] {
+    color: #1a7f37;
+}
+
+QLabel#TopBarStatus[variant="error"] {
+    color: #cf222e;
+}
+
+QFrame#Footer {
+    background-color: #ffffff;
+    border-top-color: #d1d9e0;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+QLabel#FooterLabel,
+QLabel#SidebarVersion {
+    color: #57606a;
+}

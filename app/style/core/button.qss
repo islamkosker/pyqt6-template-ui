@@ -1,0 +1,94 @@
+/* =========================================================
+    CORE BUTTON STYLES
+   ---------------------------------------------------------
+   Structural shell only. Theme (light/dark) supplies colors,
+   shadows, and any opacity-based muted states.
+
+   Header map — what lives here vs application vs theme:
+   - Radius        → HERE (border-radius).
+   - Font          → HERE (weight; family/size often app typography).
+   - Cursor        → APPLICATION LAYER (setCursor); QSS is unreliable.
+   - Border reset  → HERE (width/style; color stays transparent until theme).
+   - Shadow        → THEME or code (QGraphicsDropShadowEffect); QSS shadow
+                     is limited and usually implies rgba = color.
+   - Hover         → THEME-first (background, border-color, color, shadow).
+                     CORE: avoid border-width toggles — they shift layout unless
+                     margin compensation is applied (fragile in QSS).
+   - Active/pressed→ HERE: inset padding / border geometry.
+                     THEME: darker/lighter fills, border-color, color.
+   - Disabled      → THEME (and optional opacity): palette is color.
+                     CORE: avoid rules that imply greying unless theme owns.
+   - Focus         → THEME: focus ring color (border-color / outline).
+                     CORE: outline none on base; optional outline-width in
+                     theme — keep geometry stable in core.
+   - Checked       → HERE: emphasis without palette (e.g. font-weight).
+                     THEME: selected fill, border-color, color.
+   =========================================================
+
+   NOTES
+   - All button styles build on this core; load theme QSS after core.
+   - Size (padding scale, min sizes) may be overridden at app layer.
+   - border-color: transparent is a placeholder so theme border-color applies
+     cleanly; do not put real palette colors in this file.
+   ========================================================= */
+
+
+QPushButton {
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 4px;
+
+    padding: 4px 8px;
+    min-height: 1em;
+
+    font-weight: 500;
+
+    background-color: transparent;
+    outline: none;
+}
+
+
+/* :hover
+   Core: no geometry change by default (prevents 1px↔2px layout jump).
+   Theme: background-color, color, border-color, box-shadow (if used). */
+QPushButton:hover {
+}
+
+
+/* :pressed / :on (active while held)
+   Core: 1px vertical inset feel via padding (no color).
+   Theme: pressed background, border-color, color. */
+QPushButton:pressed {
+    padding-top: 5px;
+    padding-bottom: 3px;
+    border-width: 1px;
+}
+
+
+/* :disabled
+   Core: no mandatory rules — greying is color/contrast (theme).
+   Theme: color, background-color, border-color, opacity. */
+QPushButton:disabled {
+}
+
+
+/* :focus
+   Core: no extra geometry — base already uses outline: none.
+   Theme: border-color, outline, or box-shadow for visible focus (contrast). */
+QPushButton:focus {
+}
+
+
+/* :checked (toggle / persistent selected)
+   Core: typographic emphasis independent of palette.
+   Theme: checked background, border-color, color. */
+QPushButton:checked {
+    font-weight: 600;
+}
+
+
+/* Placement hints (colors still come from theme files). */
+QPushButton[context="sidebar"] {
+    min-height: 36px;
+}

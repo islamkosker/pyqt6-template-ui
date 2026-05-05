@@ -1,0 +1,33 @@
+/* Sidebar button colors — light theme */
+
+QPushButton[context="sidebar"] {
+    color: #4b5563;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+QPushButton[context="sidebar"]:hover {
+    color: #1f2937;
+    background-color: rgba(59, 130, 246, 0.10);
+    border-color: rgba(59, 130, 246, 0.18);
+}
+
+QPushButton[context="sidebar"][active="true"] {
+    color: #111827;
+    background-color: #CFD6E8;
+    border-color: transparent;
+}
+
+QPushButton[context="sidebar"]:focus {
+    border-color: rgba(37, 99, 235, 0.55);
+}
+
+QPushButton[context="sidebar"][is_header="true"] {
+    color: #111827;
+}
+
+QPushButton[context="sidebar"]:disabled {
+    color: #9ca3af;
+    background-color: transparent;
+    border-color: transparent;
+}
